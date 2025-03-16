@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Analyzer</title>
+</head>
+<body>
+    <h1>Password Analyzer</h1>
+    <form method="POST">
+        <label for="password">Enter Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Analyze</button>
+    </form>
+    {% if result %}
+        <p>Password Strength: {{ result }}</p>
+        <p>Breach Status: {{ breach_status }}</p>
+    {% endif %}
+</body>
+</html>
